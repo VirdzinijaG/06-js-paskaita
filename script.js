@@ -68,6 +68,34 @@ console.log(skMasyvas);
 // Isvesti n-zenklio skaiciaus visus skaitmenis atksirai ir surasti ju suma. 
 // Kiekviena skaitmeni surasome i masyva
 
+let skaicius, skaitmuo, suma;
+let skaMasyvas = [];
+//console.log(skaMasyvas); parasyti isvedima po ciklo, nes tada bus uzpildytas masyvas
+
+suma = 0;
+skaicius = 123456;
+let indeksas = 0;
+
+// 123456
+// 123456 / 10 = 12345
+// 12345 / 10 = 1234
+// 1234 / 10 = 123
+// 123 / 10 = 12
+// 12 / 10 = 1
+// 1 / 10 = 0
+
+while (skaicius !=0) {
+    skaitmuo = skaicius % 10;
+    skaMasyvas[indeksas] = skaitmuo; // pildomas masyvas
+    skaicius = parseInt(skaicius / 10);
+    suma = suma + skaitmuo;
+    console.log ("skaitmuo " + skaitmuo);
+    indeksas++; // skaiciuojamas indeksas
+    
+
+}
+console.log(skaMasyvas);
+console.log ("suma " + suma);
 
 
 
